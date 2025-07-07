@@ -24,11 +24,11 @@ class ParticleSystem:
         self.mode = mode
         self.interactions = []
 
-    def add_particle(self, particle):
-        if len(self.particle) < self.max_particles:
-            self.particles.append(particle)
+    def add_particle(self, particles):
+        if len(self.particles) < self.max_particles:
+            self.particles.append(particles)
 
-    def add_interaction(self, interacrtion_func):
+    def add_interaction(self, interaction_func):
         self.interactions.append(interaction_func)
 
     def step(self, dt):
